@@ -1,5 +1,6 @@
-$(document).ready(function() {
-  $.getJSON('/scripts/csvjson.json', function(data) {
+$(document).ready(function () {
+  // método ajax para obtenção de dados JSON
+  $.getJSON('/scripts/csvjson.json', (data) => {
     $('#table_id').DataTable({
       data: data,
       bAutoWidth: false,
@@ -57,5 +58,20 @@ $(document).ready(function() {
     });
   }).fail(function(jqxhr, textStatus, error) {
     console.error("Falha ao ler o arquivo JSON: " + error);
+  });
+
+  $('#table_id').on('click', 'span#categorias, span#nivel', function() {
+    var clickedText = $(this).text().trim();
+    var searchBox = $('.form-control, .form-control-sm');
+    var currentSearchValue = searchBox.val().trim();
+
+    // Verifica se a caixa de pesquisa já contém algum valor
+    if (currentSearchValue.length > 0) {
+      // Adiciona o valor clicado à caixa de pesquisa separado por vírgula
+      searchBox.val(currentSearchValue + ', ' + clickedText);
+    } else {
+      // Define o valor clicado como o valor da caixa de pesquisa
+      searchBox.val(clickedText);
+    }
   });
 });
