@@ -1,0 +1,188 @@
+$NormalFont: 1.6rem;
+$SmallFont: 1.4rem;
+$Subtitle1Font: 1.8rem;
+$Subtitle2Font: 2rem;
+$titleFont: 2.6rem;
+
+$BrandeisBlue: #0060F1;
+$PhilippineBlue: #003FA6;
+$BrandeisBlueTransparent: #02122b1a;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+header {
+    height: auto;
+    width: auto;
+
+
+    section {
+        height: auto;
+        width: auto;
+
+        nav.navbar {
+            height: 6rem;
+            width: 100%;
+            padding: {
+                left: 5rem;
+                right: 5rem;
+            }
+
+            a.navbar-brand {
+                font: {
+                    size: $titleFont;
+                }
+                color: $PhilippineBlue;
+            }
+
+            div.collapse {
+                div.navbar-nav{
+                    a.nav-item {
+                        font: {
+                            size: $NormalFont;
+                        }
+
+                        color: $BrandeisBlue;
+
+                        &:hover {
+                            color: $PhilippineBlue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    section#tabela {
+        margin-top: 1rem;
+
+        th {
+            font-size: $NormalFont;
+        }
+
+        div#table_id_wrapper {
+            div.row {
+
+                div.col-sm-12 {
+
+                    div#table_id_length {
+                        label {
+                            font: {
+                                size: $NormalFont;
+                            }
+
+                            select {
+
+                                option {
+                                    font: {
+                                        size: $NormalFont;
+                                    }
+
+                                    &:hover {
+                                        background: $PhilippineBlue;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    div#table_id_filter {
+                        label {
+                            font: {
+                                size: $NormalFont;
+                            }
+                        }
+                    }
+
+                    table#table_id {
+
+                        thead {
+                            tr {
+                                
+                                th {
+                                    font: {
+                                        size: $NormalFont;
+                                    }
+                                    text: {
+                                        align: center;
+                                    }
+                                }
+                            }
+                        }
+
+                        tbody {
+
+                            tr.odd {
+                                background: {
+                                    color: $BrandeisBlueTransparent;
+                                }
+                            }
+
+                            tr.even {
+                            }
+                            
+                            tr {
+                                font: {
+                                    size: $NormalFont;
+                                }
+
+                                span {
+                                    font: {
+                                        size: $NormalFont;
+                                    }
+                                    margin: {
+                                        left: 3rem;
+                                    }
+                                }
+                            }
+
+                            td {
+                                font: {
+                                    size: $NormalFont
+                                }
+                                height: 20rem;
+                            }
+                        }
+
+
+                    }
+
+                    div#table_id_info {
+                        font: {
+                            size: $NormalFont;
+                        }
+                    }
+
+                    div#table_id_paginate {
+                        ul.pagination {
+                            li {
+                                font: {
+                                    size: $NormalFont;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    }
+
+    div.divBuscas {
+        select {
+            font: {
+                size: $NormalFont;
+                }
+                option {
+                    font: {
+                        size: $NormalFont;
+                    }
+                }
+            }
+        }
+    }    
+    }
