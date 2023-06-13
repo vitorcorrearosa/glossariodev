@@ -14,12 +14,12 @@
 <body>
     <header>
         <section class="container-fluid">
-            <nav class="navbar navbar-expand">
+            <nav class="navbar navbar-expand navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">Glossário.Dev</a>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(Página atual)</span></a>
-                        <a class="nav-item nav-link" href="#">Coopera.Dev</a>
+                        <a class="nav-item nav-link" href="#">Sobre</a>
                     </div>
                 </div>
             </nav>
@@ -28,17 +28,10 @@
 
     <main>
         <section class="container" id="tabela">
-            <div class="divBuscas">
-                <select name="" id="">
-                    <option value="">Teste</option>
-                    <option value="">Teste</option>
-                    <option value="">Teste</option>
-                    <option value="">Teste</option>
-                    <option value="">Teste</option>
-                    <option value="">Teste</option>
-                </select>
-            </div>
-            <table id="table_id" class="display">
+            <div class="divBuscas cointainer d-flex justify-content-end">
+                <button class="btn   btn-warning" id="cleanBtn">Limpar</button>
+            </div>            
+            <table id="table_id" class="display container-fluid">
             </table>
         </section>
     </main>
@@ -46,7 +39,7 @@
     <footer style="font-size: 10rem"></footer>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.12.1/af-2.4.0/r-2.3.0/sc-2.0.7/sl-1.4.0/datatables.min.js"></script>
 <script src="scripts/script.js"></script>
 </html>     

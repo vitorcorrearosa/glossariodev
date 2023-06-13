@@ -1,12 +1,18 @@
+//declaração de variaveis
+
 $NormalFont: 1.6rem;
 $SmallFont: 1.4rem;
 $Subtitle1Font: 1.8rem;
 $Subtitle2Font: 2rem;
-$titleFont: 2.6rem;
+$titleFont: 2.4rem;
 
 $BrandeisBlue: #0060F1;
 $PhilippineBlue: #003FA6;
 $BrandeisBlueTransparent: #02122b1a;
+$Bone: #E0DDCF;
+$Isabeline: #F1F0EA;
+
+// configs globais
 
 * {
     margin: 0;
@@ -15,28 +21,46 @@ $BrandeisBlueTransparent: #02122b1a;
     font-size: 62.5%;
 }
 
+// mixins, keyframes, etc
+
+@mixin espacamento() {
+    padding: {
+        left: 1rem;
+        right: 1rem;
+    }
+}
+
+
+// estilização
+
 header {
     height: auto;
     width: auto;
 
-
     section {
         height: auto;
         width: auto;
-
         nav.navbar {
-            height: 6rem;
-            width: 100%;
+            height: 4.5rem;
+            width: auto;
             padding: {
                 left: 5rem;
                 right: 5rem;
             }
-
+            
             a.navbar-brand {
+                @include espacamento();
                 font: {
                     size: $titleFont;
+                    style: none;
                 }
-                color: $PhilippineBlue;
+                text: {
+                    decoration: none;
+                }
+                color: $Bone;
+                &:hover {
+                    color: $Isabeline;
+                }
             }
 
             div.collapse {
@@ -46,10 +70,10 @@ header {
                             size: $NormalFont;
                         }
 
-                        color: $BrandeisBlue;
+                        color: $Bone;
 
                         &:hover {
-                            color: $PhilippineBlue;
+                            color: $Isabeline;
                         }
                     }
                 }
@@ -140,6 +164,13 @@ main {
                                         left: 3rem;
                                     }
                                 }
+
+                                a {
+                                    font: {
+                                        size: calc($NormalFont - .3rem);
+                                    }
+                                    color: $PhilippineBlue;
+                                }
                             }
 
                             td {
@@ -148,6 +179,8 @@ main {
                                 }
                                 height: 7rem;
                             }
+
+                            text-align: center;
                         }
 
 
@@ -170,9 +203,9 @@ main {
                     }
                 }
             }
-    }
+        }
 
-    div.divBuscas {
+        div.divBuscas {
         select {
             font: {
                 size: $NormalFont;
@@ -183,6 +216,17 @@ main {
                     }
                 }
             }
+
+        button#cleanBtn {
+            font: {
+                size: $NormalFont;
+            }
+            
+        }    
+        }
+
+        span#categorias{
+            margin-bottom: 1rem;
         }
     }    
-    }
+}
